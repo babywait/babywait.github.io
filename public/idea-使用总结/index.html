@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>IDEA 使用总结 - Baby Wait</title><meta name="Description" content="Baby Wait"><meta property="og:url" content="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">
+  <meta property="og:site_name" content="Baby Wait">
+  <meta property="og:title" content="IDEA 使用总结">
+  <meta property="og:description" content="设置 内存设置：编码丝滑不卡顿 作用：解决 IDEA 编辑、多开项目等卡顿的问题，让编码更丝滑 配置方式：有很多种途径，这里只写一种，Help -&gt; Edit Custom VM Options 配置">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-27T08:55:44+08:00">
+    <meta property="article:modified_time" content="2024-06-27T08:55:44+08:00">
+    <meta property="article:tag" content="IDEA">
+    <meta property="article:tag" content="工具">
+    <meta property="article:tag" content="效率">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:title" content="IDEA 使用总结">
+  <meta name="twitter:description" content="设置 内存设置：编码丝滑不卡顿 作用：解决 IDEA 编辑、多开项目等卡顿的问题，让编码更丝滑 配置方式：有很多种途径，这里只写一种，Help -&gt; Edit Custom VM Options 配置">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "IDEA 使用总结",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93\/"
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "IDEA, 工具, 效率","wordcount":  659 ,
+        "url": "http:\/\/localhost:1313\/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93\/","datePublished": "2024-06-27T08:55:44+08:00","dateModified": "2024-06-27T08:55:44+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Baby Wait"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Baby Wait"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Baby Wait</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Baby Wait"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Baby Wait</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">IDEA 使用总结</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Baby Wait</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-27">2024-06-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 659 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#设置">设置</a>
+      <ul>
+        <li><a href="#内存设置编码丝滑不卡顿">内存设置：编码丝滑不卡顿</a></li>
+        <li><a href="#内存显示看见心里踏实">内存显示：看见心里踏实</a></li>
+        <li><a href="#自动-import--清除无用-import">自动 import &amp; 清除无用 import</a></li>
+        <li><a href="#禁用-import-">禁用 import *</a></li>
+        <li><a href="#代码提示忽略大小写">代码提示忽略大小写</a></li>
+        <li><a href="#live-template">live template</a>
+          <ul>
+            <li><a href="#nl">nl</a></li>
+            <li><a href="#np">np</a></li>
+          </ul>
+        </li>
+        <li><a href="#file-and-code-templates">File and Code Templates</a>
+          <ul>
+            <li><a href="#enum">Enum</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#快捷键设置">快捷键设置</a>
+      <ul>
+        <li><a href="#打开最近的项目option--r">打开最近的项目：option + R</a></li>
+        <li><a href="#打开option--o">打开：option + O</a></li>
+      </ul>
+    </li>
+    <li><a href="#常用内置快捷键">常用内置快捷键</a>
+      <ul>
+        <li><a href="#重构代码">重构代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#debug-tips">Debug tips</a></li>
+    <li><a href="#idea-插件">IDEA 插件</a>
+      <ul>
+        <li><a href="#multihighlight高亮选中变量">MultiHighlight：高亮选中变量</a></li>
+        <li><a href="#translation翻译">Translation：翻译</a></li>
+        <li><a href="#lombok自动生成-gettersetter">Lombok：自动生成 getter/setter</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="设置">设置</h2>
+<h3 id="内存设置编码丝滑不卡顿">内存设置：编码丝滑不卡顿</h3>
+<p>作用：解决 IDEA 编辑、多开项目等卡顿的问题，让编码更丝滑</p>
+<p>配置方式：有很多种途径，这里只写一种，<code>Help -&gt; Edit Custom VM Options</code></p>
+<p>配置项：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">-Xms1024m <span class="c1">#最小启动内存参数</span>
+</span></span><span class="line"><span class="cl">-Xmx8192m <span class="c1">#最大运行内存参数</span>
+</span></span><span class="line"><span class="cl">-XX:ReservedCodeCacheSize<span class="o">=</span>512m <span class="c1">#保留代码占用的内存容量参数</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="内存显示看见心里踏实">内存显示：看见心里踏实</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627231408629.png">
+</figure>
+
+<h3 id="自动-import--清除无用-import">自动 import &amp; 清除无用 import</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627232954318.png">
+</figure>
+
+<h3 id="禁用-import-">禁用 import *</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627233157994.png">
+</figure>
+
+<h3 id="代码提示忽略大小写">代码提示忽略大小写</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627234343555.png">
+</figure>
+
+<h3 id="live-template">live template</h3>
+<h4 id="nl">nl</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">$var$</span><span class="o">&gt;</span><span class="w"> </span><span class="n">$end$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627233903424.png">
+</figure>
+
+<h4 id="np">np</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Map</span><span class="o">&lt;</span><span class="n">$val1$</span><span class="p">,</span><span class="w"> </span><span class="n">$val2$</span><span class="o">&gt;</span><span class="w"> </span><span class="n">$val3$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="file-and-code-templates">File and Code Templates</h3>
+<h4 id="enum">Enum</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">parse</span><span class="p">(</span><span class="s">&#34;Copyright.java&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">$</span><span class="p">{</span><span class="n">PACKAGE_NAME</span><span class="p">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">PACKAGE_NAME</span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="p">)</span><span class="kn">package</span><span class="w"> </span><span class="err">${</span><span class="nn">PACKAGE_NAME</span><span class="p">};</span><span class="err">#</span><span class="n">end</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.fasterxml.jackson.annotation.JsonCreator</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.fasterxml.jackson.annotation.JsonValue</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Optional</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">#</span><span class="n">parse</span><span class="p">(</span><span class="s">&#34;Author.java&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="o">&gt;</span><span class="w"> </span><span class="n">findByInt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">empty</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="o">&gt;</span><span class="w"> </span><span class="n">findByString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">name</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">empty</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@JsonCreator</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="w"> </span><span class="n">findNullableByString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">NAME</span><span class="p">}.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">name</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@JsonValue</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">toInt</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="快捷键设置">快捷键设置</h2>
+<h3 id="打开最近的项目option--r">打开最近的项目：option + R</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627235156879.png">
+</figure>
+
+<h3 id="打开option--o">打开：option + O</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240627234944484.png">
+</figure>
+
+<h2 id="常用内置快捷键">常用内置快捷键</h2>
+<h3 id="重构代码">重构代码</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">快捷键</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Shift + F6</td>
+<td style="text-align:center">Rename（包、类、方法、变量等）</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌃ + G</td>
+<td style="text-align:center">Select All Occurrences（选中并编辑所有当前单词的地方）</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌥ + M</td>
+<td style="text-align:center">将选中代码抽取成 Method</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌥ + C</td>
+<td style="text-align:center">将选中代码抽取成 Constant</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌥ + V</td>
+<td style="text-align:center">将选中代码抽取成 Variable</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌥ + F</td>
+<td style="text-align:center">将选中代码抽取成 Field</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌥ + P</td>
+<td style="text-align:center">将选中代码抽取成 Parameter</td>
+</tr>
+<tr>
+<td style="text-align:center">⌘ + ⌥ + T</td>
+<td style="text-align:center">将选中代码 Surround With if/try catch/Runnable&hellip;..</td>
+</tr>
+</tbody>
+</table>
+<h2 id="debug-tips">Debug tips</h2>
+<p><a href="https://blog.csdn.net/yxl_1207/article/details/80973622" target="_blank" rel="noopener noreffer ">IDEA中如何使用debug调试项目 一步一步详细教程</a></p>
+<h2 id="idea-插件">IDEA 插件</h2>
+<h3 id="multihighlight高亮选中变量">MultiHighlight：高亮选中变量</h3>
+<p>快捷键：<code>⌘ + &quot;</code> 和 <code>⌘ + Shift + &quot;</code></p>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628002451595.png">
+</figure>
+
+<h3 id="translation翻译">Translation：翻译</h3>
+<p>快捷键：<code>⌘ + ⌃ + I</code> 和 <code>⌘ + ⌃ + U</code></p>
+<h3 id="lombok自动生成-gettersetter">Lombok：自动生成 getter/setter</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628003132131.png">
+</figure>
+
+<h2 id="参考资料">参考资料</h2>
+<p><a href="https://www.bilibili.com/video/BV1Ft411V7rf/?p=6&amp;vd_source=96daa63dca9ca2bbc59250a649e16c49" target="_blank" rel="noopener noreffer ">IntelliJ IDEA神器使用技巧</a></p>
+<p><a href="https://www.jetbrains.com/help/idea/getting-started.html" target="_blank" rel="noopener noreffer ">IDEA 官方文档</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-06-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" data-title="IDEA 使用总结" data-hashtags="IDEA,工具,效率"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" data-hashtag="IDEA"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" data-title="IDEA 使用总结"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" data-title="IDEA 使用总结"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" data-title="IDEA 使用总结"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/idea/">IDEA</a>,&nbsp;<a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>,&nbsp;<a href="/tags/%E6%95%88%E7%8E%87/">效率</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

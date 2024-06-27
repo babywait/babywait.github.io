@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - Baby Wait</title>
-        <link>http://localhost:1313/posts/</link>
-        <description>所有文章 | Baby Wait</description>
+        <title>IDEA - 标签 - Baby Wait</title>
+        <link>http://localhost:1313/tags/idea/</link>
+        <description>IDEA - 标签 - Baby Wait</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zhaokai5116@gmail.com (Baby Wait)</managingEditor>
-            <webMaster>zhaokai5116@gmail.com (Baby Wait)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 27 Jun 2024 08:55:44 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zhaokai5116@gmail.com (Baby Wait)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 27 Jun 2024 08:55:44 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/idea/" rel="self" type="application/rss+xml" /><item>
     <title>IDEA 使用总结</title>
     <link>http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Thu, 27 Jun 2024 08:55:44 &#43;0800</pubDate>

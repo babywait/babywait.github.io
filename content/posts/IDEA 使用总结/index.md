@@ -175,13 +175,9 @@ public enum ${NAME} {
 
 快捷键：`⌘ + ⌃ + I` 和 `⌘ + ⌃ + U`
 
-### Lombok：自动生成 getter/setter
-
-
-
 {{< figure src="images/image-20240628003132131.png">}}
 
-
+### Lombok：自动生成 getter/setter
 
 ## 参考资料
 

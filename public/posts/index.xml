@@ -10,7 +10,7 @@
     <pubDate>Thu, 27 Jun 2024 08:55:44 &#43;0800</pubDate>
     <author>Baby Wait</author>
     <guid>http://localhost:1313/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[设置 内存设置（解决卡顿） 参考资料 IntelliJ IDEA神器使用技巧]]></description>
+    <description><![CDATA[设置 内存设置：编码丝滑不卡顿 作用：解决 IDEA 编辑、多开项目等卡顿的问题，让编码更丝滑 配置方式：有很多种途径，这里只写一种，Help -&gt; Edit Custom VM Options 配置]]></description>
 </item>
 </channel>
 </rss>

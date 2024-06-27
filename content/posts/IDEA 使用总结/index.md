@@ -1,7 +1,7 @@
 +++
 title = 'IDEA 使用总结'
 date = 2024-06-27T08:55:44+08:00
-draft = true
+draft = false
 tags = ['IDEA','工具','效率']
 
 +++

@@ -165,6 +165,10 @@ public enum ${NAME} {
 
 ## IDEA 插件
 
+### Maven Helper：pom 可视化&依赖冲突排包
+
+{{< figure src="images/image-20240628084836293.png">}}
+
 ### MultiHighlight：高亮选中变量
 
 快捷键：`⌘ + "` 和 `⌘ + Shift + "`
@@ -177,7 +181,29 @@ public enum ${NAME} {
 
 {{< figure src="images/image-20240628003132131.png">}}
 
+
+
+### String Manipulation：字符串
+
+{{< figure src="images/image-20240628085114391.png">}}
+
+### Key Promoter X：快捷键提示
+
+{{< figure src="images/image-20240628085238617.png">}}
+
+
+
 ### Lombok：自动生成 getter/setter
+
+### GitToolBox
+
+### GsonFormatPlus
+
+### PlantUML integration
+
+### SequenceDiagram：生成代码调用时序图
+
+{{< figure src="images/image-20240628085828427.png">}}
 
 ## 参考资料
 

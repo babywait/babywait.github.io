@@ -36,7 +36,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93\/"
-        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "IDEA, 工具, 效率","wordcount":  659 ,
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "IDEA, 工具, 效率","wordcount":  739 ,
         "url": "http:\/\/localhost:1313\/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93\/","datePublished": "2024-06-27T08:55:44+08:00","dateModified": "2024-06-27T08:55:44+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
@@ -53,7 +53,7 @@
             <a href="/" title="Baby Wait"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Baby Wait</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -98,7 +98,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
@@ -113,10 +113,10 @@
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
+            <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">IDEA 使用总结</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Baby Wait</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-27">2024-06-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 659 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-06-27">2024-06-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 739 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -159,9 +159,16 @@
     <li><a href="#debug-tips">Debug tips</a></li>
     <li><a href="#idea-插件">IDEA 插件</a>
       <ul>
+        <li><a href="#maven-helperpom-可视化依赖冲突排包">Maven Helper：pom 可视化&amp;依赖冲突排包</a></li>
         <li><a href="#multihighlight高亮选中变量">MultiHighlight：高亮选中变量</a></li>
         <li><a href="#translation翻译">Translation：翻译</a></li>
+        <li><a href="#string-manipulation字符串">String Manipulation：字符串</a></li>
+        <li><a href="#key-promoter-x快捷键提示">Key Promoter X：快捷键提示</a></li>
         <li><a href="#lombok自动生成-gettersetter">Lombok：自动生成 getter/setter</a></li>
+        <li><a href="#gittoolbox">GitToolBox</a></li>
+        <li><a href="#gsonformatplus">GsonFormatPlus</a></li>
+        <li><a href="#plantuml-integration">PlantUML integration</a></li>
+        <li><a href="#sequencediagram生成代码调用时序图">SequenceDiagram：生成代码调用时序图</a></li>
       </ul>
     </li>
     <li><a href="#参考资料">参考资料</a></li>
@@ -408,6 +415,10 @@
 <h2 id="debug-tips">Debug tips</h2>
 <p><a href="https://blog.csdn.net/yxl_1207/article/details/80973622" target="_blank" rel="noopener noreffer ">IDEA中如何使用debug调试项目 一步一步详细教程</a></p>
 <h2 id="idea-插件">IDEA 插件</h2>
+<h3 id="maven-helperpom-可视化依赖冲突排包">Maven Helper：pom 可视化&amp;依赖冲突排包</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628084836293.png">
+</figure>
+
 <h3 id="multihighlight高亮选中变量">MultiHighlight：高亮选中变量</h3>
 <p>快捷键：<code>⌘ + &quot;</code> 和 <code>⌘ + Shift + &quot;</code></p>
 <figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628002451595.png">
@@ -418,7 +429,22 @@
 <figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628003132131.png">
 </figure>
 
+<h3 id="string-manipulation字符串">String Manipulation：字符串</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628085114391.png">
+</figure>
+
+<h3 id="key-promoter-x快捷键提示">Key Promoter X：快捷键提示</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628085238617.png">
+</figure>
+
 <h3 id="lombok自动生成-gettersetter">Lombok：自动生成 getter/setter</h3>
+<h3 id="gittoolbox">GitToolBox</h3>
+<h3 id="gsonformatplus">GsonFormatPlus</h3>
+<h3 id="plantuml-integration">PlantUML integration</h3>
+<h3 id="sequencediagram生成代码调用时序图">SequenceDiagram：生成代码调用时序图</h3>
+<figure><img src="/idea-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/images/image-20240628085828427.png">
+</figure>
+
 <h2 id="参考资料">参考资料</h2>
 <p><a href="https://www.bilibili.com/video/BV1Ft411V7rf/?p=6&amp;vd_source=96daa63dca9ca2bbc59250a649e16c49" target="_blank" rel="noopener noreffer ">IntelliJ IDEA神器使用技巧</a></p>
 <p><a href="https://www.jetbrains.com/help/idea/getting-started.html" target="_blank" rel="noopener noreffer ">IDEA 官方文档</a></p>

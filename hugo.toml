@@ -406,7 +406,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
       # 是否使侧边目录自动折叠展开
-      auto = false
+      auto = true
     # Code config
     # 代码配置
     [params.page.code]
@@ -822,22 +822,22 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         name = "Categories"
         url = "/categories/"
         title = ""
-      [[languages.en.menu.main]]
-        weight = 4
-        identifier = "documentation"
-        pre = ""
-        post = ""
-        name = "Docs"
-        url = "/categories/documentation/"
-        title = ""
-      [[languages.en.menu.main]]
-        weight = 5
-        identifier = "about"
-        pre = ""
-        post = ""
-        name = "About"
-        url = "/about/"
-        title = ""
+#      [[languages.en.menu.main]]
+#        weight = 4
+#        identifier = "documentation"
+#        pre = ""
+#        post = ""
+#        name = "Docs"
+#        url = "/categories/documentation/"
+#        title = ""
+#      [[languages.en.menu.main]]
+#        weight = 5
+#        identifier = "about"
+#        pre = ""
+#        post = ""
+#        name = "About"
+#       url = "/about/"
+#        title = ""
       [[languages.en.menu.main]]
         weight = 6
         identifier = "github"
@@ -867,23 +867,23 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           gravatarEmail = ""
           avatarURL = "/images/avatar.png"
           title = ""
-          subtitle = "Stay hungry stay follish"
+          subtitle = "Baby, wait, bug fixes right away"
           typeit = true
           social = true
           disclaimer = ""
       [languages.en.params.social]
         GitHub = "xxxx"
-        Twitter = "xxxx"
-        Instagram = "xxxx"
-        Facebook = "xxxx"
-        Telegram = "xxxx"
-        Youtubelegacy = "xxxx"
-        Phone = "555-555-555"
+        #Twitter = "xxxx"
+        #Instagram = "xxxx"
+        #Facebook = "xxxx"
+        #Telegram = "xxxx"
+        #Youtubelegacy = "xxxx"
+        #Phone = "555-555-555"
         Email = "xxxx@xxxx.com"
         RSS = true
-        [languages.en.params.social.Mastodon]
-          id = "@xxxx"
-          prefix = "https://mastodon.technology/"
+        #[languages.en.params.social.Mastodon]
+        #  id = "@xxxx"
+        #  prefix = "https://mastodon.technology/"
 
   [languages.zh-cn]
     weight = 2
@@ -916,21 +916,21 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         name = "分类"
         url = "/categories/"
         title = ""
-      [[languages.zh-cn.menu.main]]
-        weight = 4
-        identifier = "documentation"
-        pre = ""
-        name = "文档"
-        url = "/categories/documentation/"
-        title = ""
-      [[languages.zh-cn.menu.main]]
-        weight = 5
-        identifier = "about"
-        pre = ""
-        post = ""
-        name = "关于"
-        url = "/about/"
-        title = ""
+#      [[languages.zh-cn.menu.main]]
+#        weight = 4
+#        identifier = "documentation"
+#        pre = ""
+#        name = "文档"
+#        url = "/categories/documentation/"
+#        title = ""
+#      [[languages.zh-cn.menu.main]]
+#        weight = 5
+#        identifier = "about"
+#        pre = ""
+#        post = ""
+#        name = "关于"
+#        url = "/about/"
+#        title = ""
       [[languages.zh-cn.menu.main]]
         weight = 6
         identifier = "github"
